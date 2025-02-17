@@ -10,6 +10,7 @@ function TodoForm() {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        maxLength={50}
         placeholder="Enter a task"
         style={{
           width: "300px",  // Increase width of input

@@ -4,7 +4,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #f6f4f4;
+  background-color: #f5f1f1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -77,14 +77,16 @@ button:focus-visible {
 
 /* Container Styling */
 .container {
-  width: 100%;         /* Ensure the container takes full width */
-  max-width: 1200px;   /* Increased max-width to 1200px */
+  width: auto;         /* Ensure the container takes full width */
+  max-width: 1200px;   /* Keep the max-width */
   padding: 2rem;
   background: rgb(47, 48, 48);
-  margin: 50px auto;   /* Center it with auto margin */
+  margin: 20px 0 0 20px; /* Margin: 20px from top and left */
+  position: absolute;   /* Position it absolutely */
+  top: 0;
+  left: 0;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(21, 22, 21, 0.1);
-  flex-grow: 1;        /* Allow the container to expand if space is available */
 }
 
 /* Input Container */
@@ -191,4 +193,9 @@ li button:hover {
 .button-container {
   display: flex;            /* Arrange buttons horizontally */
   gap: 10px;                /* Adds a consistent gap between buttons */
+}
+html, body {
+  height: 100%; /* Ensure both html and body take full height */
+  margin: 0;    /* Remove any default margin */
+  padding: 0;   /* Remove any default padding */
 }
