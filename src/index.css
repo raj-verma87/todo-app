@@ -143,17 +143,47 @@ li button:hover {
   background: darkred;
 }
 
-/* Task Item */
 .task-item {
   padding: 10px;
   margin: 5px 0;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   font-size: 16px;
   font-weight: bold;
   color: #333;
+  width: 100%;  /* Ensure full width */
+}
+
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between checkbox and text */
+  flex-grow: 0; /* Ensures text takes available space */
+}
+
+.task-content input[type="checkbox"] {
+  flex-shrink: 0; /* Prevent checkbox from resizing */
+  width: 16px; /* Fixed checkbox size */
+  height: 16px; /* Fixed checkbox size */
+  margin: 0; /* Remove default margin */
+  cursor: pointer;
+}
+
+.task-content span {
+  flex-grow: 0; /* Let task text take available space */
+  text-align: left; /* Align text to the left */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show '...' when text is too long */
+}
+
+
+.task-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
 }
 
 .task-item button {
@@ -198,4 +228,9 @@ html, body {
   height: 100%; /* Ensure both html and body take full height */
   margin: 0;    /* Remove any default margin */
   padding: 0;   /* Remove any default padding */
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }
